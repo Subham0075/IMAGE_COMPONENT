@@ -298,7 +298,11 @@
   }
 
   .component-card.video-card {
-    max-width: 95%;
+    /* max-width: 95%; */
+    width: 100%;
+    height: 100%;
+    border-radius: 15px; /* Rounded corners still apply */
+    object-fit: cover; /* This will be ignored by iframe but doesn't hurt */
   }
 
   .component-video {
@@ -407,4 +411,27 @@
   0% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.1); }
   50% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.3); }
   100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.1); }
+}
+.embedded-video {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover; /* not necessary for iframe but safe */
+  border: none;
+}
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
