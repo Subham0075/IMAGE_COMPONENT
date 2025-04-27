@@ -113,11 +113,12 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center; /* NEW */
     margin-top: -1rem;
     margin-bottom: 2rem;
   }
   
-  .book-btn {
+  /* .book-btn {
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(5px);
@@ -129,8 +130,24 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
-  }
+  } */
   
+  .book-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    min-width: 180px;  /* NEW ADDITION */
+    text-align: center; /* NEW ADDITION */
+  }  
+
   .book-btn:hover {
     background: rgba(255, 255, 255, 0.25);
     transform: scale(1.05);
